@@ -18,7 +18,7 @@ class Dialog(QtGui.QDialog):
         layout.addWidget(self.label)
         layout.addWidget(self.button)
         self.setLayout(layout)
-        self.setMinimumSize(200,150)
+        self.setMinimumSize(190,140)
         self.setWindowTitle("Hello World")
         
         #pergunta pelo nome:
