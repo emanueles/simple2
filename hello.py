@@ -20,7 +20,12 @@ class Dialog(QtGui.QDialog):
         self.setLayout(layout)
         self.setMinimumSize(200,150)
         self.setWindowTitle("Hello World")
-
+        
+        #pergunta pelo nome:
+        text, ok = QtGui.QInputDialog.getText(self, "What is your name?",
+                      "Name: ", QtGui.QLineEdit.Normal)
+        if ok and text != '':
+            self.label.setText("Hello, " + text + "!")
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     dialog = Dialog()
