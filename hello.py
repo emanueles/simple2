@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-#It uses PyQt4 to display hello world
+#It uses PyQt4 to display hello world, but before asks for the username
 import sys
 from PyQt4 import QtCore, QtGui
 
