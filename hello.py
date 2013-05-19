@@ -14,11 +14,12 @@ class Dialog(QtGui.QDialog):
         
         #signals
         self.button.clicked.connect(self.accept)
+        
         layout = QtGui.QVBoxLayout()
         layout.addWidget(self.label)
         layout.addWidget(self.button)
         self.setLayout(layout)
-        self.setMinimumSize(200,150)
+        self.setMinimumSize(180,130)
         self.setWindowTitle("Hello World")
         
         #pergunta pelo nome:
@@ -26,6 +27,7 @@ class Dialog(QtGui.QDialog):
                       "Name: ", QtGui.QLineEdit.Normal)
         if ok and text != '':
             self.label.setText("Hello, " + text + "!")
+
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
     dialog = Dialog()
